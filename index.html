@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime Management System</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="server.js">
+</head>
+<body>
+  <header>
+    <h1>Crime Management System</h1>
+    <div>
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Violent.html">Violent</a></li>
+        <li><a href="Property.html">Property</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <section id="crime-report">
+      <h2>Report a Crime</h2>
+      <form id="crime-form" action="http://localhost:3000/report-crime" method="POST">
+        <label for="crime-type">Type of Crime:</label>
+        <input type="text" id="crime-type" name="crimeType" required><br><br>
+        
+        <label for="crime-description">Description:</label><br>
+        <textarea id="crime-description" name="crimeDescription" rows="4" cols="50" required></textarea><br><br>
+        
+        <label for="reporter-name">Your Name:</label>
+        <input type="text" id="reporter-name" name="reporterName" required><br><br>
+        
+        <label for="reporter-contact">Contact Information:</label>
+        <input type="tel" id="reporter-contact" name="reporterContact" pattern="[0-9+()-\s]*" 
+        placeholder="+232-22-222-222" required><br><br>
+
+        <input type="submit" value="Submit Report">
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Crime Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html>
